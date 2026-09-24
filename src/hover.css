@@ -1,0 +1,44 @@
+.hero-art {
+  perspective: 1200px;
+}
+
+.product-shot {
+  transition:
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 500ms ease,
+    filter 500ms ease;
+  will-change: transform;
+}
+
+.hero-art:hover .product-shot {
+  transform: perspective(1200px) rotateY(-1deg) rotateX(0deg) translateY(-10px) scale(1.015);
+  box-shadow:
+    0 42px 90px rgba(0, 0, 0, 0.7),
+    0 0 0 5px #1b4a3a,
+    0 0 45px rgba(66, 229, 180, 0.14);
+  filter: saturate(1.08) brightness(1.04);
+}
+
+.product-shot + .glow {
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.hero-art:hover .product-shot + .glow {
+  opacity: 1.7;
+  transform: scale(1.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-shot,
+  .product-shot + .glow {
+    transition: none;
+  }
+
+  .hero-art:hover .product-shot {
+    transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
+  }
+
+  .hero-art:hover .product-shot + .glow {
+    transform: none;
+  }
+}
