@@ -42,7 +42,7 @@ function App() {
   };
 
   return <div className="page" id="top">
-    <div className="announcement"><span className="pulse" /> Termimus v0.2 is out <a href="#download">Get the latest release <ArrowRight size={14} /></a></div>
+    <div className="announcement"><span className="pulse" /> Termimus v0.3.0 is out <a href="#download">Get the latest release <ArrowRight size={14} /></a></div>
     <header className="nav shell">
       <Logo />
       <nav className={menuOpen ? "nav-links open" : "nav-links"}>
@@ -90,10 +90,10 @@ function App() {
 
       <section className="sync-section shell" id="sync"><div className="sync-copy"><div className="eyebrow"><span className="eyebrow-line" /> YOUR INFRASTRUCTURE, YOUR RULES</div><h2>Sync on your<br /><span>own terms.</span></h2><p>Need your setup on another machine? Run the lightweight Go relay on your own server. End-to-end encryption means the relay can connect your devices without ever being able to read your data.</p><div className="command-box compose-box"><pre>{syncCompose}</pre><button onClick={copyCommand} aria-label="Copy Docker Compose configuration">{copied ? <Check size={16} /> : <Copy size={16} />}</button></div><small className="command-note"><Check size={13} /> Copy this as <code>docker-compose.yml</code> · under 20 MB RAM</small></div><div className="sync-visual"><div className="sync-node node-laptop"><Monitor size={24} /><span>work laptop</span><small>encrypted data</small></div><div className="connection"><span /><span /><span /></div><div className="sync-server"><div className="server-icon"><Network size={25} /></div><span>your relay</span><small>blind storage</small></div><div className="connection reverse"><span /><span /><span /></div><div className="sync-node node-home"><Monitor size={24} /><span>home desktop</span><small>encrypted data</small></div></div></section>
 
-      <section className="download-section shell" id="download"><div className="download-card"><div className="download-copy"><div className="eyebrow"><span className="eyebrow-line" /> START CONNECTING</div><h2>Make your terminal<br /><em>feel like home.</em></h2><p>Free, open source, and built for the long haul.</p><a className="button button-primary" href="https://github.com/termimus/termimus-ssh/releases/latest" target="_blank" rel="noreferrer"><Download size={17} /> Download Termimus <ArrowRight size={16} /></a><small>v0.2.1 · MIT License · No account required</small></div><div className="download-mark"><img src={`${import.meta.env.BASE_URL}logo.png`} alt="Termimus" /><div className="mark-ring" /></div></div></section>
+      <section className="download-section shell" id="download"><div className="download-card"><div className="download-copy"><div className="eyebrow"><span className="eyebrow-line" /> START CONNECTING</div><h2>Make your terminal<br /><em>feel like home.</em></h2><p>Free, open source, and built for the long haul.</p><a className="button button-primary" href="https://github.com/termimus/termimus-ssh/releases/latest" target="_blank" rel="noreferrer"><Download size={17} /> Download Termimus <ArrowRight size={16} /></a><small>v0.3.0 · MIT License · No account required</small></div><div className="download-mark"><img src={`${import.meta.env.BASE_URL}logo.png`} alt="Termimus" /><div className="mark-ring" /></div></div></section>
     </main>
 
-    <footer className="footer shell"><Logo compact /><span>© 2025 Termimus. Crafted for people who ship.</span><div><a href="https://github.com/termimus/termimus-ssh" target="_blank" rel="noreferrer">GitHub</a><a href="#security">Security</a><a href="https://github.com/termimus/termimus-ssh/blob/main/LICENSE" target="_blank" rel="noreferrer">License</a></div></footer>
+    <footer className="footer shell"><Logo compact /><span>© 2026 Termimus. Crafted for people who ship.</span><div><a href="https://github.com/termimus/termimus-ssh" target="_blank" rel="noreferrer">GitHub</a><a href="#security">Security</a><a href="https://github.com/termimus/termimus-ssh/blob/main/LICENSE" target="_blank" rel="noreferrer">License</a></div></footer>
   </div>;
 }
 
