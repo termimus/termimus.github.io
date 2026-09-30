@@ -42,7 +42,7 @@ function App() {
   };
 
   return <div className="page" id="top">
-    <div className="announcement"><span className="pulse" /> Termimus v0.4.5 is out <a href="#download">Get the latest release <ArrowRight size={14} /></a></div>
+    <div className="announcement"><span className="pulse" /> Termimus v0.4.6 is out <a href="#download">Get the latest release <ArrowRight size={14} /></a></div>
     <header className="nav shell">
       <Logo />
       <nav className={menuOpen ? "nav-links open" : "nav-links"}>
@@ -93,7 +93,7 @@ function App() {
 
       <section className="donation-section shell" id="donate"><div className="donation-card"><div className="donation-icon"><img src={`${import.meta.env.BASE_URL}kofi.png`} alt="Ko-fi" /></div><div className="donation-copy"><div className="eyebrow"><span className="eyebrow-line" /> SUPPORT THE PROJECT</div><h2>Keep Termimus<br /><span>independent.</span></h2><p>Termimus is free and open source. If it helps you ship with confidence, your support helps us keep building a private, local-first tool for everyone.</p><a className="button button-donation" href="https://ko-fi.com/termimus" target="_blank" rel="noreferrer"><img src={`${import.meta.env.BASE_URL}kofi.png`} alt="" /> Buy us a coffee <ArrowRight size={16} /></a></div></div></section>
 
-      <section className="download-section shell" id="download"><div className="download-card"><div className="download-copy"><div className="eyebrow"><span className="eyebrow-line" /> START CONNECTING</div><h2>Make your terminal<br /><em>feel like home.</em></h2><p>Free, open source, and built for the long haul.</p><a className="button button-primary" href="https://github.com/termimus/termimus-ssh/releases/latest" target="_blank" rel="noreferrer"><Download size={17} /> Download Termimus <ArrowRight size={16} /></a><small>v0.4.5 · MIT License · No account required</small></div><div className="download-mark"><img src={`${import.meta.env.BASE_URL}logo.png`} alt="Termimus" /><div className="mark-ring" /></div></div></section>
+      <section className="download-section shell" id="download"><div className="download-card"><div className="download-copy"><div className="eyebrow"><span className="eyebrow-line" /> START CONNECTING</div><h2>Make your terminal<br /><em>feel like home.</em></h2><p>Free, open source, and built for the long haul.</p><a className="button button-primary" href="https://github.com/termimus/termimus-ssh/releases/latest" target="_blank" rel="noreferrer"><Download size={17} /> Download Termimus <ArrowRight size={16} /></a><small>v0.4.6 · MIT License · No account required</small></div><div className="download-mark"><img src={`${import.meta.env.BASE_URL}logo.png`} alt="Termimus" /><div className="mark-ring" /></div></div></section>
     </main>
 
     <footer className="footer shell"><Logo compact /><span>© 2026 Termimus. Crafted for people who ship.</span><div><a href="https://github.com/termimus/termimus-ssh" target="_blank" rel="noreferrer">GitHub</a><a href="#security">Security</a><a href="https://github.com/termimus/termimus-ssh/blob/main/LICENSE" target="_blank" rel="noreferrer">License</a></div></footer>
