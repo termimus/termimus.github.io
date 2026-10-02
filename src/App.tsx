@@ -6,10 +6,10 @@ import {
 } from "lucide-react";
 
 const features = [
-  { icon: Terminal, title: "A terminal that keeps up", text: "Multi-tab sessions, split panes, broadcast input, and a fast async SSH engine built for serious work.", tone: "mint" },
-  { icon: Network, title: "See the whole cluster", text: "Save multi-server workspaces and launch your entire infrastructure in one click.", tone: "blue" },
-  { icon: KeyRound, title: "Your keys stay yours", text: "Encrypted local vault for hosts, identities, snippets, and private keys. No account required.", tone: "violet" },
-  { icon: Code2, title: "More than SSH", text: "Move files with dual-pane SFTP, edit remote configs, and manage tunnels without leaving the app.", tone: "orange" },
+  { icon: Terminal, title: "Remote & local terminal", text: "Work over SSH or open an integrated local PTY shell with tabs, split panes, search, and responsive interactive input.", tone: "mint" },
+  { icon: Network, title: "Workspaces that scale", text: "Organize hosts into workspaces, launch multi-server clusters, and move between environments without losing context.", tone: "blue" },
+  { icon: KeyRound, title: "Vault, keys & biometrics", text: "Protect credentials with an encrypted local vault, reusable identities, and biometric quick unlock where supported.", tone: "violet" },
+  { icon: Code2, title: "SFTP, tunnels & themes", text: "Transfer files, edit remote configs, manage port forwarding, and personalize your workspace with focused themes.", tone: "orange" },
 ];
 
 const faqs = [
@@ -51,7 +51,7 @@ function App() {
   };
 
   return <div className="page" id="top">
-    <div className="announcement"><span className="pulse" /> Termimus v0.5.1 is out <a href="#download">Get the latest release <ArrowRight size={14} /></a></div>
+    <div className="announcement"><span className="pulse" /> Termimus v0.6.1 is out <a href="#download">Get the latest release <ArrowRight size={14} /></a></div>
     <header className="nav shell">
       <Logo />
       <nav className={menuOpen ? "nav-links open" : "nav-links"}>
@@ -101,7 +101,7 @@ function App() {
 
       <section className="sync-section shell" id="sync"><div className="sync-copy"><div className="eyebrow"><span className="eyebrow-line" /> YOUR INFRASTRUCTURE, YOUR RULES</div><h2>Sync on your<br /><span>own terms.</span></h2><p>Need your setup on another machine? Run the lightweight Go relay on your own server. End-to-end encryption means the relay can connect your devices without ever being able to read your data.</p><div className="command-box compose-box"><pre>{syncCompose}</pre><button onClick={copyCommand} aria-label="Copy Docker Compose configuration">{copied ? <Check size={16} /> : <Copy size={16} />}</button></div><small className="command-note"><Check size={13} /> Copy this as <code>docker-compose.yml</code> · under 20 MB RAM</small></div><div className="sync-visual"><div className="sync-node node-laptop"><Monitor size={24} /><span>work laptop</span><small>encrypted data</small></div><div className="connection"><span /><span /><span /></div><div className="sync-server"><div className="server-icon"><Network size={25} /></div><span>your relay</span><small>blind storage</small></div><div className="connection reverse"><span /><span /><span /></div><div className="sync-node node-home"><Monitor size={24} /><span>home desktop</span><small>encrypted data</small></div></div></section>
 
-      <section className="download-section shell" id="download"><div className="download-card"><div className="download-copy"><div className="eyebrow"><span className="eyebrow-line" /> START CONNECTING</div><h2>Make your terminal<br /><em>feel like home.</em></h2><p>Free, open source, and built for the long haul.</p><a className="button button-primary" href="https://github.com/termimus/termimus-ssh/releases/latest" target="_blank" rel="noreferrer"><Download size={17} /> Download Termimus <ArrowRight size={16} /></a><small>v0.5.1 · MIT License · No account required</small></div><div className="download-mark"><img src={`${import.meta.env.BASE_URL}logo.png`} alt="Termimus" /><div className="mark-ring" /></div></div></section>
+      <section className="download-section shell" id="download"><div className="download-card"><div className="download-copy"><div className="eyebrow"><span className="eyebrow-line" /> START CONNECTING</div><h2>Make your terminal<br /><em>feel like home.</em></h2><p>Free, open source, and built for the long haul.</p><a className="button button-primary" href="https://github.com/termimus/termimus-ssh/releases/latest" target="_blank" rel="noreferrer"><Download size={17} /> Download Termimus <ArrowRight size={16} /></a><small>v0.6.1 · MIT License · No account required</small></div><div className="download-mark"><img src={`${import.meta.env.BASE_URL}logo.png`} alt="Termimus" /><div className="mark-ring" /></div></div></section>
 
       <section className="faq-section section shell" id="faq"><div className="section-heading"><div><div className="eyebrow"><span className="eyebrow-line" /> NEED TO KNOW</div><h2>Frequently Asked<br /><span>Questions.</span></h2></div><p>Still curious? Find more answers and start a conversation in the Termimus community.</p></div><div className="faq-list">{faqs.map(({ question, answer }) => <details className="faq-item" key={question}><summary>{question}<ChevronDown size={17} /></summary><p>{answer}</p></details>)}</div></section>
     </main>
