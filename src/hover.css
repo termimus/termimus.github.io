@@ -14,8 +14,8 @@
   transform: perspective(1200px) rotateY(-1deg) rotateX(0deg) translateY(-10px) scale(1.015);
   box-shadow:
     0 42px 90px rgba(0, 0, 0, 0.7),
-    0 0 0 5px #1b4a3a,
-    0 0 45px rgba(66, 229, 180, 0.14);
+    0 0 0 5px #243041,
+    0 0 45px rgba(0, 210, 180, 0.14);
   filter: saturate(1.08) brightness(1.04);
 }
 
