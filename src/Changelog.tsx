@@ -1,4 +1,5 @@
 import { ArrowLeft, ArrowRight, GitBranch } from "lucide-react";
+import { useEffect } from "react";
 import { changelog } from "./changelog";
 
 function Logo() {
@@ -9,6 +10,10 @@ function Logo() {
 }
 
 export default function Changelog() {
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (id) document.getElementById(id)?.scrollIntoView();
+  }, []);
   return <div className="page changelog-page">
     <header className="nav shell">
       <Logo />
@@ -24,7 +29,7 @@ export default function Changelog() {
     <main className="changelog-main shell">
       <a className="back-link" href="/"><ArrowLeft size={15} /> Back to home</a>
       <div className="changelog-hero"><div className="eyebrow"><span className="eyebrow-line" /> RELEASE HISTORY</div><h1>What’s new in<br /><em>Termimus.</em></h1><p>Every release, improvement, and fix — from the initial launch to the latest version.</p></div>
-      <div className="changelog-list">{changelog.map(({ version, title, items, link }) => <article className="changelog-item" key={version}><div className="changelog-version">v{version}</div><div className="changelog-content"><div className="changelog-title-row"><h2>{title}</h2><a href={link} target="_blank" rel="noreferrer" aria-label={`View Termimus v${version} details`}><ArrowRight size={15} /></a></div><ul>{items.map((item) => <li key={item}>{item}</li>)}</ul></div></article>)}</div>
+      <div className="changelog-list">{changelog.map(({ version, title, items, link }) => <article className="changelog-item" key={version} id={`v${version}`}><div className="changelog-version">v{version}</div><div className="changelog-content"><div className="changelog-title-row"><h2>{title}</h2><a href={link} target="_blank" rel="noreferrer" aria-label={`View Termimus v${version} details`}><ArrowRight size={15} /></a></div><ul>{items.map((item) => <li key={item}>{item}</li>)}</ul></div></article>)}</div>
     </main>
 
     <footer className="footer shell"><Logo /><span>© 2026 Termimus. Crafted for people who ship.</span><div><a href="/">Home</a><a href="https://github.com/termimus/termimus-ssh" target="_blank" rel="noreferrer">GitHub</a></div></footer>
